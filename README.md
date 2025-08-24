@@ -1,56 +1,60 @@
-# cleaned-data-project
-📊 Flipkart Product Data Analysis
-📌 Project Overview
+# Flipkart E-commerce Data Analysis  
 
-This project analyzes a Flipkart product dataset to understand pricing patterns, discounts, product categories, and outliers.
-The main goal is to clean, transform, and visualize the data to generate insights that can help in product performance analysis.
+This project analyzes a sample of Flipkart's e-commerce dataset to uncover insights into product pricing, discounts, ratings, and categories.  
+It demonstrates the full **data analysis workflow** — from data cleaning to advanced visualizations.  
 
-📂 Dataset Details
+---
 
-Source: Flipkart scraped product dataset
+## 📌 Project Overview  
+The main goals of this project were to:  
+- Perform **data cleaning and preprocessing** on raw e-commerce data.  
+- Explore product features such as **retail price, discounted price, discount percentage, and ratings**.  
+- Visualize the data using **Matplotlib, Seaborn, and Plotly**.  
+- Identify trends in product categories, pricing patterns, and brand distribution.  
 
-Main Columns:
+---
 
-product_name – Name of the product
+## 📂 Dataset  
+- Source: `flipkart_com-ecommerce_sample.csv`  
+- Key Features:  
+  - `retail_price`, `discounted_price`, `discount_percentage`  
+  - `brand`, `product_category_tree`, `product_rating`  
+  - `overall_rating`, `description`  
 
-product_category_tree – Product category hierarchy
+---
 
-retail_price – Original price before discount
+## 🛠️ Tools & Libraries  
+- **Python**  
+- **Pandas** (data cleaning, transformation)  
+- **Matplotlib** & **Seaborn** (statistical visualization)  
+- **Plotly** (interactive visualizations)  
 
-discounted_price – Price after discount
+---
 
-discount_percentage – Calculated discount percentage
+## 📊 Visualizations  
 
-overall_rating – Customer rating of the product
+### 🔹 Univariate Analysis  
+- Distribution of retail prices  
+- Distribution of product ratings  
+- Top brands and categories  
 
-🛠 Steps Performed
-1. Data Cleaning
+### 🔹 Bivariate Analysis  
+- Retail price vs. discounted price  
+- Discount percentage by category  
+- Brand vs. product rating  
 
-Removed duplicates
+### 🔹 Multivariate Analysis  
+- Correlation heatmap  
+- Pairplots for top brands  
+- Interactive Plotly charts (scatter, bar)  
 
-Handled missing values (replaced with 0 or NaN where appropriate)
+---
 
-Corrected data types
+## 🚀 Key Insights  
+- Most products are priced below **₹20,000**, with a large proportion offering discounts.  
+- The **“Unknown” brand** dominates the dataset, followed by a few popular brands.  
+- Certain categories (like apparel and accessories) show **high discount percentages**.  
+- Strong correlation exists between **retail price and discounted price**.  
+- Plotly interactive plots make it easy to drill down into **top brands and categories**.  
 
-2. Feature Engineering
-
-Created discount_percentage =
-(retail_price−discounted_price)/retail_price×100
-
-3. Data Transformation
-
-Filtering products with discount > 50%
-
-Grouping by category and finding max/min prices
-
-4. Outlier Detection
-
-Used boxplots to visualize outliers in numeric columns
-
-📊 Key Insights
-
-Many products have discounts above 50%
-
-Certain categories consistently have higher retail prices
-
-Outliers mostly appear in retail_price and discounted_price columns
+---
